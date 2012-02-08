@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>GuitarJS ~ Web based Guitar simulation</title>
+    <script src="jquery-1.7.1.js"></script>
+    <script src="guitar.js"></script>
+    <script>
+        $(function () {
+            $Guitar.init($('#neck'));
+        });
+    </script>
+    <style>@import "guitar.css";</style>
+</head>
+<body>
+<h1>GuitarJS ~ Web based Guitar simulation</h1>
+
+<fieldset>
+    <legend>Controls</legend>
+    <label>
+        <input type="range" min="0" max="360" id="colorScale" class="setting" value="180"> Color scale
+        [<span id="colorScaleValue"></span>]
+        <br>
+    </label>
+
+    <label>
+        <input type="range" min="0" max="36" id="frets" class="setting" value="12"> Frets
+        [<span id="fretsValue"></span>]
+        <br>
+    </label>
+
+    <label>
+        <input type="checkbox" value="true" id="enableColor" class="setting" checked> Colors
+        <br>
+    </label>
+
+    <label>
+        <input type="checkbox" value="true" id="enableWhiteKeys" class="setting" checked> White keys
+        <br>
+    </label>
+
+    <label>
+        <input type="checkbox" value="true" id="enableBlackKeys" class="setting" checked> Black keys
+        <br>
+    </label>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>Chord generation</legend>
+    Root note
+    <label> <input type="radio" name="chord-root" value="C"> C </label>
+    <label> <input type="radio" name="chord-root" value="C♯/D♭"> C♯/D♭ </label>
+    <label> <input type="radio" name="chord-root" value="D"> D </label>
+    <label> <input type="radio" name="chord-root" value="D♯/E♭"> D♯/E♭ </label>
+    <label> <input type="radio" name="chord-root" value="E"> E </label>
+    <label> <input type="radio" name="chord-root" value="F"> F </label>
+    <label> <input type="radio" name="chord-root" value="F♯/G♭"> F♯/G♭ </label>
+    <label> <input type="radio" name="chord-root" value="G"> G </label>
+    <label> <input type="radio" name="chord-root" value="G♯/A♭"> G♯/A♭ </label>
+    <label> <input type="radio" name="chord-root" value="A"> A </label>
+    <label> <input type="radio" name="chord-root" value="A♯/B♭"> A♯/B♭ </label>
+    <label> <input type="radio" name="chord-root" value="B"> B </label>
+
+    <label>
+        <input type="checkbox" id="chord-minor"> Minor
+    </label>
+    <label>
+        <input type="checkbox" id="chord-seven"> 7
+    </label>
+
+    <input id="clearChord" type="button" value="Clear">
+
+    <br><br>
+    <div id="chordNotes"></div>
+</fieldset>
+
+<br>
+
+<div id="neck">
+</div>
+</body>
+</html>

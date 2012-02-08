@@ -1,0 +1,54 @@
+#neck {
+}
+
+.fret {
+    height: 280px;
+    width: 80px;
+    float: left;
+}
+
+#neck>:first-child.fret {
+    width: 100px;
+}
+
+.fret .string {
+    height: 40px;
+    border-top: 1px solid black;
+    border-right: 3px solid #55B;
+    background-color: #F0BE89;
+}
+
+.fret .string.finger .letter {
+    background-color: #00DD00;
+    border-radius: 15px;
+}
+
+.fret .string.no-finger .letter {
+    background-color: #DD0000;
+    border-radius: 15px;
+}
+
+#neck>:first-child.fret .string {
+    border-left: 1px solid black;
+    border-right: 10px solid #613A10;
+}
+
+.fret .label {
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+.note {
+    height: 30px;
+    border: 3px solid #111;
+    border-radius: 4px;
+    margin: 3px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.note .letter {
+    height: 21px;
+    margin: 4px 4px;
+    vertical-align: middle;
+}
